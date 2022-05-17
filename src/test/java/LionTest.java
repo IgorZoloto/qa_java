@@ -9,8 +9,6 @@ import java.util.List;
 
 public class LionTest {
 
-//    @Mock
-//    Lion lion;
 
     @Test
     public void getKittensShouldReturnNumber() throws Exception {
