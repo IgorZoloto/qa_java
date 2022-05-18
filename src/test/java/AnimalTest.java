@@ -14,8 +14,6 @@ public class AnimalTest {
     public void getFoodShouldReturnGreenEater() throws Exception {
         List<String> actual = animal.getFood("Травоядное");
         List<String> expected = new ArrayList<>(Arrays.asList("Трава", "Различные растения"));
-        System.out.println(actual);
-        System.out.println(expected);
         Assert.assertEquals(expected, actual);
     }
 
@@ -23,8 +21,6 @@ public class AnimalTest {
     public void getFoodShouldReturnMeatEater() throws Exception {
         List<String> actual = animal.getFood("Хищник");
         List<String> expected = new ArrayList<>(Arrays.asList("Животные", "Птицы", "Рыба"));
-        System.out.println(actual);
-        System.out.println(expected);
         Assert.assertEquals(expected, actual);
     }
 
@@ -32,8 +28,6 @@ public class AnimalTest {
     public void getFoodShouldReturnOtherEater() throws Exception {
         List<String> actual = animal.getFood("Рептилия");
         List<String> expected = new ArrayList<>(Arrays.asList("Неизвестный вид животного, используйте значение Травоядное или Хищник"));
-        System.out.println(actual);
-        System.out.println(expected);
         Assert.assertEquals(expected, actual);
     }
 
@@ -42,6 +36,5 @@ public class AnimalTest {
         String expected = "Существует несколько семейств: заячьи, беличьи, мышиные, кошачьи, псовые, медвежьи, куньи";
         String actual = animal.getFamily();
         Assert.assertEquals(expected, actual);
-
     }
 }

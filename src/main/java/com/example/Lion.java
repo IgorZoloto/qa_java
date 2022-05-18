@@ -2,41 +2,32 @@ package com.example;
 
 import java.util.List;
 
-public class Lion extends Animal implements Kittens {
+public class Lion {
 
+    Feline feline;
     boolean hasMane;
 
-    public Lion(String sex) throws Exception {
+    public Lion(String sex, Feline feline) throws Exception {
+        this.feline = feline;
         if ("Самец".equals(sex)) {
             hasMane = true;
         } else if ("Самка".equals(sex)) {
             hasMane = false;
         } else {
-            throw new Exception("Используйте допустимые значения пола животного - самец или самка");
+            throw new Exception("Используйте допустимые значения пола животного - самей или самка");
         }
     }
 
-    @Override
-    public int getKittens(int kittensCount) {
-        return kittensCount;
-    }
-
     public int getKittens() {
-
-        return getKittens(1);
-
+        return feline.getKittens();
     }
-
 
     public boolean doesHaveMane() {
-
         return hasMane;
     }
 
-
     public List<String> getFood() throws Exception {
-
-        return getFood("Хищник");
-
+        return feline.getFood("Хищник");
     }
 }
+

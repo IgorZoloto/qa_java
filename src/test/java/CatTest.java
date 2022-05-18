@@ -23,7 +23,9 @@ public class CatTest {
 
     @Before
     public void setUp() throws Exception {
+
         cat = new Cat(feline);
+
     }
 
     @Test
@@ -33,14 +35,11 @@ public class CatTest {
         Assert.assertEquals(expected, actual);
     }
 
-
     @Test
     public void getFoodReturnString() throws Exception {
         List<String> expected = Collections.emptyList();
         Mockito.when(feline.eatMeat()).thenReturn(expected);
         List<String> actual = cat.getFood();
         Assert.assertEquals(expected, actual);
-
-
     }
 }

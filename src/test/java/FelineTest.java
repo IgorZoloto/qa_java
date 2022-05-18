@@ -11,27 +11,19 @@ public class FelineTest {
 
     Feline feline = new Feline();
 
-
     @Test
     public void eatMeatShouldReturnPredatorString() throws Exception {
         List<String> actual = feline.eatMeat();
         List<String> expected = new ArrayList<>(Arrays.asList("Животные", "Птицы", "Рыба"));
-        System.out.println(actual);
-        System.out.println(expected);
         Assert.assertEquals(expected, actual);
-
     }
-
 
     @Test
     public void getFamilyShouldReturnPositive() {
-
         String expected = "Кошачьи";
         String actual = feline.getFamily();
         Assert.assertEquals(expected, actual);
-
     }
-
 
     @Test
     public void getKittensShouldReturnOne() {
@@ -39,6 +31,4 @@ public class FelineTest {
         int expected = 1;
         Assert.assertEquals(expected, actual);
     }
-
-
 }

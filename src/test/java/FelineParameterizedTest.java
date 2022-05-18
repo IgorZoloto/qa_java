@@ -12,14 +12,12 @@ public class FelineParameterizedTest {
     private int firstNumber;
     private int secondNumber;
 
-
     public FelineParameterizedTest(int firstNumber, int secondNumber) {
         this.firstNumber = firstNumber;
         this.secondNumber = secondNumber;
-
     }
 
-    @Parameterized.Parameters
+    @Parameterized.Parameters(name = "Тестовые данные: {0} {1}")
     public static Object[][] kittens() {
         return new Object[][]{
                 {1, 1},
@@ -35,5 +33,4 @@ public class FelineParameterizedTest {
         int expected = secondNumber;
         Assert.assertEquals(expected, actual);
     }
-
 }
